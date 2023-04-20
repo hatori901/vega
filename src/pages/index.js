@@ -1,3 +1,5 @@
+import localFont from 'next/font/local'
+
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -14,26 +16,31 @@ import Head from "next/head";
 
 import { fetchQuery } from "@/utils/sanity";
 
+const font = localFont({
+	src: "../styles/fonts/AktivGrotesk-Regular.ttf",
+})
+
 export default function Home({ navbar, data }) {
+	console.log(data.testimonials)
 	return (
-		<>
+		<div className='bg-indigo-500'>
 			<Head>
 				<title>Vega</title>
 			</Head>
-			<main className="bg-indigo-500">
+			<main className={font.className}>
 				<Navbar data={navbar} />
 				<Hero data={data.hero} />
 				<About data={data.about} />
 				{/* <Video /> */}
 				<Pricing data={data.pricing} />
-				<Scrollable data={data.testimonials} />
-				<Testimoni />
-				<Partner />
-				<Resources />
+				<Scrollable />
+				<Testimoni data={data.testimonials} />
+				<Partner data={data.partners} />
+				<Resources data={data.features} />
 				<Banner />
 				<Footer />
 			</main>
-		</>
+		</div>
 	);
 }
 
@@ -66,7 +73,19 @@ export async function getStaticProps() {
 			"image" : testimonial_image.asset->url,
 			testimonial_author,
 			testimonial_text
-		}[]
+		}[],
+		partners {
+			"image" : partner_image.asset->url,
+			partner_name,
+		}[],
+		features {
+			title,
+			text,
+			features{
+				"feature_icon": feature_image.asset->url,
+				feature_text,
+			}[]
+		},
 	}`);
 	return {
 		props: {
