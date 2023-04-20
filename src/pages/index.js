@@ -21,7 +21,6 @@ const font = localFont({
 })
 
 export default function Home({ navbar, data }) {
-	console.log(data.testimonials)
 	return (
 		<div className='bg-indigo-500'>
 			<Head>
@@ -31,13 +30,13 @@ export default function Home({ navbar, data }) {
 				<Navbar data={navbar} />
 				<Hero data={data.hero} />
 				<About data={data.about} />
-				{/* <Video /> */}
+				<Video />
 				<Pricing data={data.pricing} />
 				<Scrollable />
 				<Testimoni data={data.testimonials} />
 				<Partner data={data.partners} />
 				<Resources data={data.features} />
-				<Banner />
+				<Banner data={data.banner} />
 				<Footer />
 			</main>
 		</div>
@@ -86,6 +85,13 @@ export async function getStaticProps() {
 				feature_text,
 			}[]
 		},
+		banner{
+			"image" : banner_image.asset->url,
+			banner_text_1,
+			banner_text_2,
+			banner_button_text,
+			banner_button_url
+		}
 	}`);
 	return {
 		props: {

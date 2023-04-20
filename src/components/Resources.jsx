@@ -3,13 +3,13 @@ import Image from 'next/image'
 export default function Resources({ data }) {
     return (
         <section className='bg-white'>
-            <div className='max-w-7xl mx-auto'>
+            <div className='max-w-7xl mx-auto px-5 md:px-0'>
                 <div className='border-t border-black' />
                 <h2 className='text-xl my-3 text-indigo-500'>{data.title}</h2>
-                <h1 className='text-6xl my-10 leading-none'>
+                <h1 className='text-2xl md:text-6xl my-10 leading-none'>
                     {data.text}
                 </h1>
-                <div className='grid grid-cols-4 gap-5 py-10'>
+                <div className='grid grid-cols-1 md:grid-cols-4 gap-5 py-10'>
                     {
                         data.features.map((feature, index) => {
                             return (

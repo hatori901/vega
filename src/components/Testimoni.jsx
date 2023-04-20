@@ -30,9 +30,9 @@ export default function Testimoni({ data }) {
     }
     return (
         <section className='max-w-6xl mx-auto'>
-            <div className='grid grid-cols-3'>
-                <div className='py-20 pr-8 border-r border-r-black'>
-                    <div>
+            <div className='grid grid-cols-1 md:grid-cols-3'>
+                <div className='py-20 md:pr-8 border-r border-r-black'>
+                    <div className='mx-5'>
                         <Image
                             src={image}
                             className='rounded-md'
@@ -60,8 +60,8 @@ export default function Testimoni({ data }) {
                         </div>
                     </div>
                 </div>
-                <div className='col-span-2 py-20 px-8'>
-                    <p className='text-3xl'>
+                <div className='col-span-2 mb-10 md:py-20 px-8'>
+                    <p className='text-xl md:text-3xl'>
                         {testimonial_text}
                     </p>
                     <div className='mt-5'>

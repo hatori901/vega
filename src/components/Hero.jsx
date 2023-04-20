@@ -1,7 +1,7 @@
 import Image from "next/image"
 export default function Hero({ data }) {
     return (
-        <div className="relative bg-indigo-500" >
+        <section className="relative bg-indigo-500" >
             <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
                 <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
                     <div className="mx-auto max-w-2xl lg:mx-0">
@@ -33,6 +33,6 @@ export default function Hero({ data }) {
                     />
                 </div>
             </div>
-        </div >
+        </section >
     )
 }
