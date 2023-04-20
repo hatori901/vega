@@ -49,6 +49,8 @@ export async function getStaticProps() {
 	const navbar = await fetchQuery(`*[_type == "navbar"][0]{
 		"logoImage": logo.asset->url,
 		navbar_links,
+		navbar_text_1,
+		navbar_text_2,
 	}`);
 	const data = await fetchQuery(`*[_type == "homePage"][0]{
 		hero {

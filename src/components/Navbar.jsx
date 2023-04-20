@@ -42,10 +42,10 @@ export default function Navbar({ data }) {
                         }
                     </ul>
                     <div className='border border-gray-800 rounded-full mx-4 px-3 py-1'>
-                        Contact Sales
+                        {data.navbar_text_1}
                     </div>
                     <div className='bg-white rounded-full px-3 py-1'>
-                        Free Trial
+                        {data.navbar_text_2}
                     </div>
                 </div>
             </nav>
