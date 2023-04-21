@@ -35,7 +35,7 @@ export default function Navbar({ data }) {
                     <ul className='flex item-center justify-around'>
                         {
                             data.navbar_links.map((nav) => (
-                                <li key={nav._key} className='text-black mx-3'>
+                                <li key={nav._key} className='nav-link'>
                                     <Link href={nav.link}>{nav.link_text}</Link>
                                 </li>
                             ))

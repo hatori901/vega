@@ -29,34 +29,33 @@ export default function Testimoni({ data }) {
         })
     }
     return (
-        <section className='max-w-6xl mx-auto'>
+        <section className='max-w-6xl max-h-[550px] mx-auto'>
             <div className='grid grid-cols-1 md:grid-cols-3'>
-                <div className='py-20 md:pr-8 border-r border-r-black'>
+                <div className='relative py-20 md:pr-8 border-r border-r-black'>
                     <div className='mx-5'>
                         <Image
                             src={image}
                             className='rounded-md'
-                            width={500}
-                            height={500}
+                            width={600}
+                            height={600}
                             alt=''
                         />
-                        <div className='flex justify-between items-center mt-10'>
-                            <div
-                                className='cursor-pointer'
-                                onClick={prevTesti}
-                            >
-                                Previous
-                            </div>
-                            <div className='flex'>
-                                {index + 1}/{data.length}
-                            </div>
-
-                            <div
-                                className='cursor-pointer'
-                                onClick={nextTesti}
-                            >
-                                Next
-                            </div>
+                    </div>
+                    <div className='absolute bottom-10 left-0 w-full flex justify-between items-center'>
+                        <div
+                            className='cursor-pointer'
+                            onClick={prevTesti}
+                        >
+                            Previous
+                        </div>
+                        <div className='flex'>
+                            {index + 1}/{data.length}
+                        </div>
+                        <div
+                            className='cursor-pointer'
+                            onClick={nextTesti}
+                        >
+                            Next
                         </div>
                     </div>
                 </div>

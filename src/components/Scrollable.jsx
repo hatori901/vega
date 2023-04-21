@@ -12,8 +12,8 @@ export default function Scrollable() {
         })
     }, [])
     return (
-        <section className='flex items-center bg-sky-900 h-[200px]'>
-            <h1 className='text-6xl md:text-8xl overflow-hidden' id='text'>
+        <section className='marquee flex items-center bg-sky-900 h-[200px]'>
+            <h1 className='marquee__inner text-6xl md:text-8xl overflow-hidden' id='text'>
                 Achieve more, save more
             </h1>
         </section>
