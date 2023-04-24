@@ -5,9 +5,11 @@ export default function Resources({ data }) {
         <section className='bg-white'>
             <div className='max-w-7xl mx-auto px-5 md:px-0'>
                 <div className='border-t border-black' />
-                <h2 className='text-[25px] my-3 text-[#605EEF]'>{data.title}</h2>
+                <h2 className='text-[25px] my-3 text-[#605EEF]'>
+                    Vega works for a range of organizations
+                </h2>
                 <h1 className='text-[68px] md:text-6xl my-10 leading-none'>
-                    {data.text}
+                    Outstanding features built for your needs, <span className='text-[#605EEF]'>makes it easy to grow</span> supporters & extend your reach
                 </h1>
                 <div className='grid grid-cols-1 md:grid-cols-4 gap-5 py-10'>
                     {

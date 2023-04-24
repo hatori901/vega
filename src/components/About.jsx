@@ -6,14 +6,16 @@ export default function About({ data }) {
         <section className='bg-[#605EEF]'>
             <div className='max-w-7xl mx-auto py-10 px-5 md:px-0'>
                 <div className='border-t border-black' />
-                <h2 className='text-[25px] my-3 text-white'>{data.title}</h2>
+                <h2 className='text-[25px] my-3 text-white'>
+                    We stand with you
+                </h2>
                 <h1 className='text-2xl md:text-[68px] my-10 leading-none'>
-                    {data.about_text_1}
+                    Powerful <span className='text-white'>technology</span> for those taking on the world{"'"}s biggest challenges.
                 </h1>
                 <h2 className='text-[25px] max-w-3xl'>
                     {data.about_text_2}
                 </h2>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-5 my-10'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-[146px] my-10'>
                     {
                         data.features.map((feature, index) => {
                             return (
