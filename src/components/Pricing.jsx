@@ -5,7 +5,7 @@ export default function Pricing({ data }) {
         <section className='bg-white'>
             <div className='max-w-7xl mx-auto py-10 px-5 md:px-0'>
                 <div className='border-t border-gray-900' />
-                <h2 className='text-[25px] my-3 text-indigo-500'>
+                <h2 className='text-[25px] my-3 text-[#605EEF]'>
                     Pricing Plans
                 </h2>
                 <h1 className='text-2xl md:text-[68px] my-20 leading-none'>
@@ -15,21 +15,21 @@ export default function Pricing({ data }) {
                     {data.pricing_plans.map((plan, index) => (
                         <div key={index} className="relative my-3">
                             {plan.is_featured && (
-                                <div className='flex items-center justify-between w-full absolute bg-indigo-500 text-white text-[17px] rounded-t-[28px] px-5 py-3 -top-12'>
+                                <div className='flex items-center justify-between w-full absolute bg-[#605EEF] text-white text-[17px] rounded-t-[28px] px-5 py-3 -top-12'>
                                     <Image src={"/assets/icon.svg"} width={15} height={15} alt="" />
                                     <div>
                                         Most Popular
                                     </div>
                                 </div>
                             )}
-                            <div className={`border border-indigo-500 ${plan.is_featured ? "rounded-b-[28px]" : "rounded-[28px]"} p-5`}>
+                            <div className={`border border-[#605EEF] ${plan.is_featured ? "rounded-b-[28px]" : "rounded-[28px]"} p-5`}>
                                 <h2 className="text-[38px] my-5"> {plan.title}</h2>
-                                <div className='border-t border-indigo-500 my-5' />
-                                <div className="text-indigo-500">
-                                    <h1 className='text-[38px]'>{plan.price}</h1>
+                                <div className='border-t border-[#605EEF] my-5' />
+                                <div className="text-[#605EEF]">
+                                    <h1 className='text-[38px] font-bold'>{plan.price}</h1>
                                     <p className='text-[17px]'>per month + tax</p>
                                 </div>
-                                <div className='border-t border-indigo-500 my-5' />
+                                <div className='border-t border-[#605EEF] my-5' />
                                 <ul className="list-disc ml-5">
                                     {
                                         plan.benefits.map((data) => {

@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
 	scroll-behavior: smooth;
-	background: #605EEF;
+	background: #605eef;
 }
 
 .nav-link {
@@ -13,7 +13,6 @@ body{
 	position: relative;
 	margin: 0 1rem;
 }
-
 
 .nav-link::before {
 	content: "";

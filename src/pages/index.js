@@ -23,7 +23,7 @@ const font = localFont({
 
 export default function Home({ navbar, data }) {
 	function init() {
-		new SmoothScroll(document, 120, 20)
+		new SmoothScroll(document, 120, 100)
 	}
 
 	function SmoothScroll(target, speed, smooth) {
