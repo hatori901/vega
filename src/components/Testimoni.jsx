@@ -29,10 +29,10 @@ export default function Testimoni({ data }) {
         })
     }
     return (
-        <section className='max-w-6xl max-h-[550px] mx-auto'>
+        <section className='max-w-6xl md:max-h-[600px] mx-auto'>
             <div className='grid grid-cols-1 md:grid-cols-3'>
-                <div className='relative py-20 md:pr-8 border-r border-r-black'>
-                    <div className='mx-5'>
+                <div className='py-20 md:pr-8 border-r border-r-black'>
+                    <div className='relative mx-5 h-full'>
                         <Image
                             src={image}
                             className='rounded-md'
@@ -40,27 +40,29 @@ export default function Testimoni({ data }) {
                             height={600}
                             alt=''
                         />
-                    </div>
-                    <div className='absolute bottom-10 left-0 w-full flex justify-between items-center'>
-                        <div
-                            className='cursor-pointer'
-                            onClick={prevTesti}
-                        >
-                            Previous
-                        </div>
-                        <div className='flex'>
-                            {index + 1}/{data.length}
-                        </div>
-                        <div
-                            className='cursor-pointer'
-                            onClick={nextTesti}
-                        >
-                            Next
+                        <div className='absolute bottom-0 left-0 w-full flex justify-between items-center'>
+                            <div
+                                className='cursor-pointer'
+                                onClick={prevTesti}
+                            >
+                                Previous
+                            </div>
+                            <div className='flex justify-between items-center'>
+                                <div className='flex mr-5'>
+                                    {index + 1}/{data.length}
+                                </div>
+                                <div
+                                    className='cursor-pointer'
+                                    onClick={nextTesti}
+                                >
+                                    Next
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className='col-span-2 mb-10 md:py-20 px-8'>
-                    <p className='text-xl md:text-3xl'>
+                    <p className='ease-in duration-300 sm:text-md md:text-xl lg:text-3xl'>
                         {testimonial_text}
                     </p>
                     <div className='mt-5'>

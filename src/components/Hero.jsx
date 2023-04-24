@@ -1,6 +1,4 @@
 import { useEffect, useRef } from "react"
-import Image from "next/image"
-
 
 export default function Hero({ data }) {
     const ref = useRef(null);
@@ -17,11 +15,11 @@ export default function Hero({ data }) {
         }
     }, []);
     return (
-        <section className="hero">
-            <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
+        <section>
+            <div className="hero mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
                 <div className="bg-[#605EEF] px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
                     <div className="mx-auto max-w-2xl lg:mx-0">
-                        <h1 className="mt-24 leading-[68px] tracking-tight text-gray-900 sm:mt-10 sm:text-6xl">
+                        <h1 className="w-1/2 mt-24 text-[68px] tracking-tight text-gray-900 sm:mt-10 sm:text-6xl break-words">
                             {data.hero_text_1}
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-gray-900">
@@ -41,12 +39,11 @@ export default function Hero({ data }) {
                 </div>
                 <div ref={ref} style={{
                     backgroundImage: `url(${data.heroImage})`,
-                    backgroundSize: "100%",
                     backgroundPosition: "right top",
                     backgroundRepeat: "no-repeat",
                     backgroundAttachment: "fixed",
-                    zIndex: -1
-
+                    transform: "translateY(0px)",
+                    zIndex: "-1"
                 }} className="lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/3 xl:mr-0" />
             </div>
         </section >
