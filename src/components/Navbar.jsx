@@ -32,10 +32,10 @@ export default function Navbar({ data }) {
         <header className='z-10 fixed mx-auto w-full'>
             <nav className='max-w-7xl mx-auto flex item-center justify-between py-5'>
                 <div>
-                    <Image src={data.logoImage} width={130} height={130} alt={"data.logo.alt"} id='logo' />
+                    <Image src={data.logoImage} width={208} height={130} alt={"data.logo.alt"} id='logo' />
                 </div>
                 <div className='flex items-center'>
-                    <ul className='flex item-center justify-around'>
+                    <ul className='flex item-center justify-around cursor-pointer'>
                         {
                             data.navbar_links.map((nav) => (
                                 <li key={nav._key} className='nav-link'>
@@ -44,10 +44,10 @@ export default function Navbar({ data }) {
                             ))
                         }
                     </ul>
-                    <div className='border border-gray-800 rounded-full mx-4 px-3 py-1'>
+                    <div className='cursor-pointer border border-gray-800 rounded-full mx-4 px-3 py-1'>
                         {data.navbar_text_1}
                     </div>
-                    <div className='bg-white rounded-full px-3 py-1'>
+                    <div className='cursor-pointer bg-white hover:bg-transparent hover:outline hover:outline-1 hover:outline-black transition-transform ease-out duration-100 rounded-full px-4 py-1 text-[16px] leading-6 text-black'>
                         {data.navbar_text_2}
                     </div>
                 </div>
