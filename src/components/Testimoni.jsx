@@ -32,7 +32,7 @@ export default function Testimoni({ data }) {
         <section className='max-w-6xl md:max-h-[600px] mx-auto'>
             <div className='grid grid-cols-1 md:grid-cols-3'>
                 <div className='py-20 md:pr-8 border-r border-r-black'>
-                    <div className='relative mx-5 h-full'>
+                    <div className='relative h-full'>
                         <Image
                             src={image}
                             className='rounded-md'

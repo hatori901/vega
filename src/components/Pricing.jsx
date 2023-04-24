@@ -4,7 +4,7 @@ export default function Pricing({ data }) {
             <div className='max-w-7xl mx-auto py-10 px-5 md:px-0'>
                 <div className='border-t border-gray-900' />
                 <h2 className='text-xl my-3 text-indigo-500'>{data.title}</h2>
-                <h1 className='text-2xl md:text-6xl my-20 leading-none'>
+                <h1 className='text-2xl md:text-[68px] my-20 leading-none'>
                     {data.pricing_text}
                 </h1>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-5 my-10 mx-5 md:mx-1">

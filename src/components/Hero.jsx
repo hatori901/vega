@@ -15,7 +15,7 @@ export default function Hero({ data }) {
         }
     }, []);
     return (
-        <section>
+        <section className="relative">
             <div className="hero mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
                 <div className="bg-[#605EEF] px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
                     <div className="mx-auto max-w-2xl lg:mx-0">
@@ -27,11 +27,11 @@ export default function Hero({ data }) {
                         </p>
                         <div className="mt-10 flex items-center gap-x-6">
                             <a href="#"
-                                className="border border-black rounded-full px-5 py-1 text-sm font-semibold text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                className="border border-black rounded-full px-5 py-1 text-sm text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                             >
                                 {data.hero_button_text_1}
                             </a>
-                            <a href="#" className="bg-white hover:bg-transparent hover:outline hover:outline-1 hover:outline-black transition-transform ease-out duration-100 rounded-full px-4 py-1 text-sm font-semibold leading-6 text-black">
+                            <a href="#" className="bg-white hover:bg-transparent hover:outline hover:outline-1 hover:outline-black transition-transform ease-out duration-100 rounded-full px-4 py-1 text-sm leading-6 text-black">
                                 {data.hero_button_text_2}
                             </a>
                         </div>

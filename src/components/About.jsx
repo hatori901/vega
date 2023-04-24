@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function About({ data }) {
     return (
-        <section className='bg-indigo-500'>
+        <section className='bg-[#605EEF]'>
             <div className='max-w-7xl mx-auto py-10 px-5 md:px-0'>
                 <div className='border-t border-black' />
                 <h2 className='text-xl my-3 text-white'>{data.title}</h2>

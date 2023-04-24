@@ -4,7 +4,7 @@ export default function Video() {
     return (
         <section className='relative w-full h-[500px]'>
             <div className='flex flex-col '>
-                <div className='bg-indigo-500 h-[250px]'>
+                <div className='bg-[#605EEF] h-[250px]'>
 
                 </div>
                 <div className='bg-white h-[250px]'>
