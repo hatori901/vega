@@ -23,7 +23,7 @@ export default function Resources({ data }) {
                                         {feature.feature_text}
                                     </p>
                                     <button className='absolute bottom-0'>
-                                        <div className='text-[18px] border border-black rounded-full px-10 py-1'>View Edition</div>
+                                        <div className='text-[18px] border border-black rounded-full px-10 py-1 hover:border-none hover:bg-black hover:text-white ease-in duration-500'>View Edition</div>
                                     </button>
                                 </div>
                             )
