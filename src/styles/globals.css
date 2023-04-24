@@ -14,9 +14,6 @@ body{
 	margin: 0 1rem;
 }
 
-.nav-link:hover {
-	transform: translateX(5px);
-}
 
 .nav-link::before {
 	content: "";
