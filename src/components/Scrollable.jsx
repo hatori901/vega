@@ -12,9 +12,9 @@ export default function Scrollable() {
         })
     }, [])
     return (
-        <section className='marquee flex items-center bg-[#244358] h-[200px]'>
-            <h1 className='marquee__inner text-6xl md:text-8xl overflow-hidden' id='text'>
-                Achieve more, save more
+        <section className='marquee flex items-center bg-[#244358] h-[382px]'>
+            <h1 className='marquee__inner text-[128px] md:text-8xl overflow-hidden' id='text'>
+                Achieve more, <span className='text-[#605EEF]'>save</span> more
             </h1>
         </section>
     )

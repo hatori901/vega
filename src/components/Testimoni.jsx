@@ -29,7 +29,7 @@ export default function Testimoni({ data }) {
         })
     }
     return (
-        <section className='max-w-6xl md:max-h-[600px] mx-auto'>
+        <section className='max-w-7xl md:max-h-[746px] mx-auto'>
             <div className='grid grid-cols-1 md:grid-cols-3'>
                 <div className='py-20 md:pr-8 border-r border-r-black'>
                     <div className='relative h-full'>
@@ -62,7 +62,7 @@ export default function Testimoni({ data }) {
                     </div>
                 </div>
                 <div className='col-span-2 mb-10 md:py-20 px-8'>
-                    <p className='ease-in duration-300 sm:text-md md:text-xl lg:text-3xl'>
+                    <p className='ease-in duration-300 sm:text-md text-[33px]'>
                         {testimonial_text}
                     </p>
                     <div className='mt-5'>

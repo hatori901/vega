@@ -20,10 +20,10 @@ export default function Banner({ data }) {
                         <h1 className="mt-24 leading-[68px] tracking-tight text-white sm:mt-10 sm:text-6xl">
                             {data.banner_text_1}
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-white">
+                        <p className="mt-6 text-[25px] leading-8 text-white">
                             {data.banner_text_2}
                         </p>
-                        <div className="mt-10 flex items-center gap-x-6">
+                        <div className="md:mt-16 flex items-center gap-x-6">
                             <a href={data.banner_button_url}
                                 className="bg-indigo-500 text-white px-10 py-2 rounded-full"
                             >
