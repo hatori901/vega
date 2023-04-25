@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 export default function Resources({ data }) {
     return (
-        <section className='bg-white'>
-            <div className='max-w-7xl mx-auto px-5 md:px-0'>
+        <section className='bg-white  px-5 md:px-0'>
+            <div className='max-w-7xl mx-auto'>
                 <div className='border-t border-black' />
                 <h2 className='text-[25px] my-3 text-[#605EEF]'>
                     Vega works for a range of organizations

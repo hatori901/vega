@@ -4,8 +4,8 @@ import Image from 'next/image'
 export default function Banner({ data }) {
 
     return (
-        <section className="relative bg-[#244358]" >
-            <div className="mx-auto lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
+        <section className="relative bg-[#244358] lg:px-8" >
+            <div className="mx-auto lg:grid lg:grid-cols-12 lg:gap-x-8 ">
                 <div className="flex items-center lg:col-span-5 lg:mr-8">
                     <Image
                         className="absolute left-0 top-0 object-cover"

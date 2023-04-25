@@ -2,8 +2,8 @@ import Image from "next/image"
 
 export default function Pricing({ data }) {
     return (
-        <section className='bg-white'>
-            <div className='max-w-7xl mx-auto py-10 px-5 md:px-0'>
+        <section className='bg-white py-10 px-5 md:px-0'>
+            <div className='max-w-7xl mx-auto'>
                 <div className='border-t border-gray-900' />
                 <h2 className='text-[25px] my-3 text-[#605EEF]'>
                     Pricing Plans
