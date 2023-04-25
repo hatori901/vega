@@ -25,6 +25,14 @@ export default function Navbar({ data }) {
                 logo.classList.remove('brightness-0')
             }
         })
+        window.onscroll = function () {
+            if (this.oldScroll > this.scrollY) {
+                navbar.classList.remove('hidden')
+            } else {
+                navbar.classList.add('hidden')
+            }
+            this.oldScroll = this.scrollY;
+        };
     }, [])
 
 
