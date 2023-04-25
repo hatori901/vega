@@ -19,7 +19,7 @@ export default function Hero({ data }) {
             <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
                 <div className="bg-[#605EEF] px-6 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pt-48 xl:col-span-6">
                     <div className="mx-auto max-w-2xl lg:mx-0">
-                        <h1 className="w-1/2 mt-20 text-[68px] tracking-tight text-gray-900 sm:mt-10 sm:text-6xl break-words">
+                        <h1 className="w-2/3 mt-20 text-[68px] tracking-tight text-gray-900 sm:mt-10 sm:text-6xl break-words">
                             {data.hero_text_1}
                         </h1>
                         <p className="w-2/3 mt-6 text-[25px] leading-8 text-gray-900">

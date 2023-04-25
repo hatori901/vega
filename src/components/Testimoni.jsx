@@ -20,6 +20,12 @@ export default function Testimoni({ data }) {
             let newIndex = index + 1
             return checkNumber(newIndex)
         })
+        const testi = document.getElementById('testi')
+        testi.classList.add('opacity-0')
+        setTimeout(() => {
+            testi.classList.remove('opacity-0')
+        }, 800)
+
     }
 
     const prevTesti = () => {
@@ -27,6 +33,10 @@ export default function Testimoni({ data }) {
             let newIndex = index - 1
             return checkNumber(newIndex)
         })
+        testi.classList.add('opacity-0')
+        setTimeout(() => {
+            testi.classList.remove('opacity-0')
+        }, 800)
     }
     return (
         <section className='max-w-7xl md:max-h-[746px] mx-auto'>
@@ -62,7 +72,7 @@ export default function Testimoni({ data }) {
                     </div>
                 </div>
                 <div className='col-span-2 mb-10 md:py-20 px-8'>
-                    <p className='ease-in duration-300 sm:text-md text-[33px]'>
+                    <p id='testi' className='duration-300 sm:text-md text-[33px]'>
                         {testimonial_text}
                     </p>
                     <div className='mt-5'>

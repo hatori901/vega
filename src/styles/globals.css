@@ -33,7 +33,7 @@ body {
 
 .hero {
 	background-image: url("/assets/hero.svg");
-	background-size: cover;
+	background-size: 100%;
 	background-position: top right;
 	background-repeat: no-repeat;
 	display: flex;
