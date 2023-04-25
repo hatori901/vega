@@ -40,7 +40,7 @@ export default function Testimoni({ data }) {
                             height={600}
                             alt=''
                         />
-                        <div className='absolute bottom-0 left-0 w-full flex justify-between items-center'>
+                        <div className='absolute -bottom-10 left-0 w-full flex justify-between items-center'>
                             <div
                                 className='cursor-pointer'
                                 onClick={prevTesti}
