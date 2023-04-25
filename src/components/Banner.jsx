@@ -25,7 +25,7 @@ export default function Banner({ data }) {
                         </p>
                         <div className="md:mt-16 flex items-center gap-x-6">
                             <a href={data.banner_button_url}
-                                className="bg-indigo-500 text-white px-10 py-2 rounded-full"
+                                className="bg-[#605EEF] text-white hover:outline hover:outline-1 hover:outline-[#605EEF] hover:bg-transparent ease-out duration-300 px-10 py-2 rounded-full"
                             >
                                 {data.banner_button_text}
                             </a>

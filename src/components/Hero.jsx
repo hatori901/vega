@@ -27,7 +27,7 @@ export default function Hero({ data }) {
                         </p>
                         <div className="mt-10 flex items-center gap-x-6">
                             <a href="#"
-                                className="border border-black rounded-full px-5 py-1 text-[16px] text-black shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                className="border border-black rounded-full px-5 py-1 text-[16px] text-black shadow-sm hover:bg-white hover:border-white"
                             >
                                 {data.hero_button_text_1}
                             </a>
