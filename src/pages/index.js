@@ -40,15 +40,8 @@ export default function Home({ navbar, data }) {
 			? document.documentElement
 			: target // safari is the new IE
 
-		target.addEventListener('mousewheel', wheel, { passive: false })
-		target.addEventListener('DOMMouseScroll', wheel, { passive: false })
-
-		function wheel(event) {
-			var delta = 0;
-			if (event.wheelDelta) delta = event.wheelDelta / 120;
-			else if (event.detail) delta = -event.detail / 3;
-
-		}
+		target.addEventListener('mousewheel', scrolled, { passive: false })
+		target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
 
 		function scrolled(e) {
 			e.preventDefault(); // disable default scrolling

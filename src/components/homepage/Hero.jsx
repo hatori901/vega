@@ -42,7 +42,8 @@ export default function Hero({ data }) {
                     backgroundPosition: "right top",
                     backgroundRepeat: "no-repeat",
                     backgroundAttachment: "fixed",
-                    transform: "translateY(0px)",
+                    backgroundSize: "cover",
+                    objectFit: "cover",
                     zIndex: "-1"
                 }} className="lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/3 xl:mr-0" />
             </div>
