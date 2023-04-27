@@ -55,9 +55,203 @@ body {
 
 @keyframes marquee {
 	0% {
-		transform: translateX(100%);
+		transform: translateX(250%);
 	}
 	100% {
 		transform: translateX(-100%);
 	}
+}
+
+@keyframes animate-heart {
+	0% {
+		transform: rotateY(0deg);
+	}
+	12.5% {
+		transform: rotateY(0deg);
+	}
+	25% {
+		transform: rotateY(0deg);
+	}
+	37.5% {
+		transform: rotateY(180deg);
+	}
+	50% {
+		transform: rotateY(180deg);
+	}
+	62.5% {
+		transform: rotateY(180deg);
+	}
+	75% {
+		transform: rotateY(180deg);
+	}
+	87.5% {
+		transform: rotateY(360deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
+}
+
+@keyframes animate-hand {
+	0% {
+		transform: rotateY(0deg);
+	}
+	25% {
+		transform: rotateY(180deg);
+	}
+	50% {
+		transform: rotateY(180deg);
+	}
+	75% {
+		transform: rotateY(360deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
+}
+
+@keyframes animate-ticket {
+	0% {
+		transform: translateX(0%);
+	}
+	50% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes animate-window {
+	0% {
+		transform: rotateY(0deg);
+		transform: rotateX(0deg);
+	}
+	25% {
+		transform: rotateY(180deg);
+		transform: rotateX(180deg);
+	}
+	50% {
+		transform: rotateY(180deg);
+		transform: rotateX(180deg);
+	}
+	75% {
+		transform: rotateY(360deg);
+		transform: rotateX(360deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+		transform: rotateX(360deg);
+	}
+}
+
+@keyframes animate-door {
+	0% {
+		transform: rotateY(0deg);
+	}
+	25% {
+		transform: rotateY(180deg);
+	}
+	50% {
+		transform: rotateY(180deg);
+	}
+	75% {
+		transform: rotateY(360deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
+}
+@keyframes animate-person-1 {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(-63%, -110%);
+	}
+	100% {
+		transform: translate(-63%, -110%);
+	}
+}
+
+@keyframes animate-person-2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translateX(126%);
+	}
+	100% {
+		transform: translateX(126%);
+	}
+}
+
+@keyframes animate-person-3 {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(-63%, 110%);
+	}
+	100% {
+		transform: translate(-63%, 110%);
+	}
+}
+
+.animate-heart {
+	animation-name: animate-heart;
+	animation-duration: 16s;
+	animation-iteration-count: infinite;
+	transform-origin: center;
+}
+
+.animate-hand {
+	animation-name: animate-hand;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	transform-origin: center;
+}
+
+.animate-person-1 {
+	animation-name: animate-person-1;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	transform-origin: center;
+}
+
+.animate-person-2 {
+	animation-name: animate-person-2;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	transform-origin: center;
+}
+
+.animate-person-3 {
+	animation-name: animate-person-3;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	transform-origin: center;
+}
+
+.animate-ticket {
+	animation-name: animate-ticket;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	transform-origin: center;
+	animation-delay: 2s;
+}
+
+.animate-window {
+	animation-name: animate-window;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	transform-origin: center;
+	animation-delay: 2s;
+}
+.animate-door {
+	animation-name: animate-door;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	transform-origin: center;
+	animation-delay: 2s;
 }
