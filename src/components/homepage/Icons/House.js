@@ -8,10 +8,10 @@ export default function House() {
         src="/assets/house.svg"
         alt=""
         fill
-        className="object-cover z-10"
+        className="object-cover"
         style={{ color: "red" }}
       />
-      <div className="absolute w-[25%] h-[20%] top-[20%] left-[37.5%] z-10">
+      <div className="absolute w-[25%] h-[20%] top-[20%] left-[37.5%]">
         <Image
           src="/assets/window.svg"
           alt=""
@@ -19,12 +19,12 @@ export default function House() {
           className="object-cover animate-window"
         />
       </div>
-      <div className="absolute w-[25%] h-[30%] z-10 bottom-[10%] left-[37.5%]">
+      <div className="absolute w-[25%] h-[30%] bottom-[10%] left-[37.5%]">
         <Image
           src="/assets/door.svg"
           alt=""
           fill
-          className="object-cover z-20 animate-door"
+          className="object-cover animate-door"
         />
       </div>
     </div>

@@ -7,14 +7,14 @@ export default function Heart() {
       <Image
         src="/assets/heart.svg"
         fill
-        className="relative animate-heart ease-in-out object-cover z-10"
+        className="relative animate-heart ease-in-out object-cover"
         alt=""
       />
       <div className="relative w-[60%] h-[60%] left-[20%] top-[20%]">
         <Image
           src="/assets/hand.svg"
           fill
-          className="relative animate-hand ease-in-out object-contain z-10"
+          className="relative animate-hand ease-in-out object-contain"
           alt=""
         />
       </div>

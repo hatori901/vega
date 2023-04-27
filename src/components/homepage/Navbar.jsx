@@ -37,7 +37,7 @@ export default function Navbar({ data }) {
 
 
     return (
-        <header className='z-10 fixed mx-auto w-full fade-out duration-300'>
+        <header className='z-10 fixed mx-auto w-full ease-out duration-300'>
             <nav className='max-w-7xl mx-auto flex item-center justify-between py-5'>
                 <div>
                     <Image src={data.logoImage} width={208} height={130} alt={"data.logo.alt"} id='logo' />
