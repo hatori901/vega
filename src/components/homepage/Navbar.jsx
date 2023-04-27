@@ -15,14 +15,13 @@ export default function Navbar({ data }) {
             if (window.scrollY > navbarOffsetBottom) {
                 if (window.scrollY > navbarOffsetTop) {
                     navbar.classList.add('bg-white')
-                    logo.classList.add('brightness-0')
+                    logo.classList.remove('brightness-0')
+                    logo.classList.remove('invert')
                 } else {
                     navbar.classList.remove('bg-white')
-                    logo.classList.remove('brightness-0')
                 }
             } else {
                 navbar.classList.remove('bg-white')
-                logo.classList.remove('brightness-0')
             }
         })
         window.onscroll = function () {
@@ -40,7 +39,14 @@ export default function Navbar({ data }) {
         <header className='z-10 fixed mx-auto w-full ease-out duration-300'>
             <nav className='max-w-7xl mx-auto flex item-center justify-between py-5'>
                 <div>
-                    <Image src={data.logoImage} width={208} height={130} alt={"data.logo.alt"} id='logo' />
+                    <Image
+                        src="/assets/logo.svg"
+                        width={208}
+                        height={130}
+                        alt={"data.logo.alt"}
+                        id='logo'
+                        className='brightness-0 invert'
+                    />
                 </div>
                 <div className='flex items-center'>
                     <ul className='flex item-center justify-around cursor-pointer'>
