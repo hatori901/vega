@@ -5,7 +5,7 @@ export default function Hero() {
         <section className='min-h-screen overflow-hidden'>
             <div className='mx-auto flex items-center justify-between'>
                 <div className='mx-20'>
-                    <h1 className='text-[68px] leading-10 font-bold text-white'>
+                    <h1 className='text-[68px] leading-10 text-white'>
                         Live Ocean
                     </h1>
                     <p className='text-[25px] mt-10 mb-16 text-white'>

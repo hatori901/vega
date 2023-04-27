@@ -5,6 +5,7 @@ import About from '@/components/liveOcean/About'
 import Video from '@/components/liveOcean/Video'
 import Paragraph from '@/components/liveOcean/Paragraph'
 import Testimoni from '@/components/liveOcean/Testimoni'
+import Achievement from '@/components/liveOcean/Achievement'
 import Footer from '@/components/liveOcean/Footer'
 
 export default function LiveOcean() {
@@ -21,6 +22,7 @@ export default function LiveOcean() {
                 <Video />
                 <Paragraph />
                 <Testimoni />
+                <Achievement />
                 <Footer />
             </main>
         </div>
