@@ -1,9 +1,31 @@
+import { useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Navbar() {
+    useEffect(() => {
+        const navbar = document.querySelector('header')
+        const navbarOffsetTop = navbar.offsetTop
+        if (navbarOffsetTop == 0) {
+            navbar.classList.remove('hidden')
+        }
+        window.onscroll = function () {
+            if (this.oldScroll > this.scrollY) {
+                navbar.classList.remove('hidden')
+                setTimeout(() => {
+                    navbar.classList.remove('opacity-0')
+                }, 300)
+            } else {
+                navbar.classList.add('opacity-0')
+                setTimeout(() => {
+                    navbar.classList.add('hidden')
+                }, 100)
+            }
+            this.oldScroll = this.scrollY;
+        };
+    }, [])
     return (
-        <header className='bg-white mx-auto w-full ease-out duration-300'>
+        <header className='bg-white z-10 fixed mx-auto w-full ease-out duration-300'>
             <nav className='max-w-7xl mx-auto flex item-center justify-between py-5'>
                 <div>
                     <Image src="/assets/logo.svg" width={208} height={130} alt={"data.logo.alt"} id='logo' />

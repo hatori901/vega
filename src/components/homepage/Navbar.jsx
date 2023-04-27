@@ -19,9 +19,13 @@ export default function Navbar({ data }) {
                     logo.classList.remove('invert')
                 } else {
                     navbar.classList.remove('bg-white')
+                    logo.classList.add('brightness-0')
+                    logo.classList.add('invert')
                 }
             } else {
                 navbar.classList.remove('bg-white')
+                logo.classList.add('brightness-0')
+                logo.classList.add('invert')
             }
         })
         window.onscroll = function () {

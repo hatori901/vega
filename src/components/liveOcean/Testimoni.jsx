@@ -36,10 +36,13 @@ export default function Testimoni() {
             return checkNumber(newIndex)
         })
         const testi = document.getElementById('testi')
+        const img = document.getElementById('image')
+        img.classList.add('opacity-0')
         testi.classList.add('opacity-0')
         setTimeout(() => {
             testi.classList.remove('opacity-0')
-        }, 800)
+            img.classList.remove('opacity-0')
+        }, 300)
 
     }
 
@@ -48,10 +51,14 @@ export default function Testimoni() {
             let newIndex = index - 1
             return checkNumber(newIndex)
         })
+        const testi = document.getElementById('testi')
+        const img = document.getElementById('image')
+        img.classList.add('opacity-0')
         testi.classList.add('opacity-0')
         setTimeout(() => {
             testi.classList.remove('opacity-0')
-        }, 800)
+            img.classList.remove('opacity-0')
+        }, 300)
     }
     return (
         <section className='bg-[#605EEF] '>
@@ -65,6 +72,7 @@ export default function Testimoni() {
                                 width={600}
                                 height={600}
                                 alt=''
+                                id='image'
                             />
                             <div className='absolute -bottom-10 left-0 w-full flex justify-between items-center'>
                                 <div
