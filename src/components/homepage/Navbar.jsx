@@ -27,8 +27,14 @@ export default function Navbar({ data }) {
         window.onscroll = function () {
             if (this.oldScroll > this.scrollY) {
                 navbar.classList.remove('hidden')
+                setTimeout(() => {
+                    navbar.classList.remove('opacity-0')
+                }, 300)
             } else {
-                navbar.classList.add('hidden')
+                navbar.classList.add('opacity-0')
+                setTimeout(() => {
+                    navbar.classList.add('hidden')
+                }, 300)
             }
             this.oldScroll = this.scrollY;
         };
