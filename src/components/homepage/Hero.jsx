@@ -42,6 +42,7 @@ export default function Hero({ data }) {
                     backgroundPosition: "right top",
                     backgroundRepeat: "no-repeat",
                     backgroundAttachment: "fixed",
+                    transform: "translateY(0px)",
                     backgroundSize: "cover",
                     objectFit: "cover",
                     zIndex: "-1"
