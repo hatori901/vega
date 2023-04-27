@@ -1,17 +1,17 @@
 import localFont from 'next/font/local'
 import { useEffect } from 'react';
 
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Video from "@/components/Video";
-import Pricing from "@/components/Pricing";
-import Scrollable from "@/components/Scrollable";
-import Testimoni from "@/components/Testimoni";
-import Partner from "@/components/Partner";
-import Resources from "@/components/Resources";
-import Banner from "@/components/Banner";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/homepage/Navbar";
+import Hero from "@/components/homepage/Hero";
+import About from "@/components/homepage/About";
+import Video from "@/components/homepage/Video";
+import Pricing from "@/components/homepage/Pricing";
+import Scrollable from "@/components/homepage/Scrollable";
+import Testimoni from "@/components/homepage/Testimoni";
+import Partner from "@/components/homepage/Partner";
+import Resources from "@/components/homepage/Resources";
+import Banner from "@/components/homepage/Banner";
+import Footer from "@/components/homepage/Footer";
 
 import Head from "next/head";
 
