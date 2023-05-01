@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
+import AnimateIn from '../AnimateIn'
 
 const testimoni = [
     {
@@ -66,14 +67,16 @@ export default function Testimoni() {
                 <div className='grid grid-cols-1 md:grid-cols-3'>
                     <div className='py-[137px] md:pr-8 border-r border-r-black'>
                         <div className='relative h-full'>
-                            <Image
-                                src={image}
-                                className='rounded-md'
-                                width={600}
-                                height={600}
-                                alt=''
-                                id='image'
-                            />
+                            <AnimateIn>
+                                <Image
+                                    src={image}
+                                    className='rounded-md'
+                                    width={600}
+                                    height={600}
+                                    alt=''
+                                    id='image'
+                                />
+                            </AnimateIn>
                             <div className='absolute -bottom-10 left-0 w-full flex justify-between items-center'>
                                 <div
                                     className='cursor-pointer'
@@ -96,17 +99,19 @@ export default function Testimoni() {
                         </div>
                     </div>
                     <div className='col-span-2 mb-10 md:py-[137px] px-8'>
-                        <p id='testi' className='duration-300 sm:text-md text-[33px]'>
-                            {testimonial_text}
-                        </p>
-                        <div className='mt-5'>
-                            <h2 className='text-2xl'>
-                                {testimonial_author}
-                            </h2>
-                            <p className='text-gray-800'>
-                                CEO, Google
+                        <AnimateIn>
+                            <p id='testi' className='duration-300 sm:text-md text-[33px]'>
+                                {testimonial_text}
                             </p>
-                        </div>
+                            <div className='mt-5'>
+                                <h2 className='text-2xl'>
+                                    {testimonial_author}
+                                </h2>
+                                <p className='text-gray-800'>
+                                    CEO, Google
+                                </p>
+                            </div>
+                        </AnimateIn>
                     </div>
                 </div>
             </div>

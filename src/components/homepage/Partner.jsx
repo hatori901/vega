@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import AnimateIn from '../AnimateIn'
 
 export default function Partner({ data }) {
     return (
@@ -10,13 +11,15 @@ export default function Partner({ data }) {
                         data.map((partner, index) => {
                             return (
                                 <div key={index} className="col-span-1 flex justify-center lg:col-span-1">
-                                    <Image
-                                        className="w-full h-full object-contain"
-                                        src={partner.image}
-                                        alt={partner.partner_name}
-                                        width={158}
-                                        height={48}
-                                    />
+                                    <AnimateIn>
+                                        <Image
+                                            className="w-full h-full object-contain"
+                                            src={partner.image}
+                                            alt={partner.partner_name}
+                                            width={158}
+                                            height={48}
+                                        />
+                                    </AnimateIn>
                                 </div>
                             )
                         })

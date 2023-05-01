@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
+import AnimateIn from '../AnimateIn';
 
 export default function Banner({ data }) {
     const ref = useRef(null);
@@ -30,19 +31,25 @@ export default function Banner({ data }) {
                 </div>
                 <div className="px-6 sm:pb-32 lg:col-span-6 lg:px-0 pt-16 xl:col-span-6">
                     <div className="mx-auto max-w-2xl lg:mx-0">
-                        <h1 className="mt-24 leading-[68px] tracking-tight text-white sm:mt-10 sm:text-6xl">
-                            {data.banner_text_1}
-                        </h1>
-                        <p className="mt-6 text-[25px] leading-8 text-white">
-                            {data.banner_text_2}
-                        </p>
-                        <div className="md:mt-16 flex items-center gap-x-6">
-                            <a href={data.banner_button_url}
-                                className="bg-[#605EEF] text-white hover:outline hover:outline-1 hover:outline-[#605EEF] hover:bg-transparent ease-out duration-300 px-10 py-2 rounded-full"
-                            >
-                                {data.banner_button_text}
-                            </a>
-                        </div>
+                        <AnimateIn>
+                            <h1 className="mt-24 leading-[68px] tracking-tight text-white sm:mt-10 sm:text-6xl">
+                                {data.banner_text_1}
+                            </h1>
+                        </AnimateIn>
+                        <AnimateIn>
+                            <p className="mt-6 text-[25px] leading-8 text-white">
+                                {data.banner_text_2}
+                            </p>
+                        </AnimateIn>
+                        <AnimateIn>
+                            <div className="md:mt-16 flex items-center gap-x-6">
+                                <a href={data.banner_button_url}
+                                    className="bg-[#605EEF] text-white hover:outline hover:outline-1 hover:outline-[#605EEF] hover:bg-transparent ease-out duration-300 px-10 py-2 rounded-full"
+                                >
+                                    {data.banner_button_text}
+                                </a>
+                            </div>
+                        </AnimateIn>
                     </div>
                 </div>
             </div>
