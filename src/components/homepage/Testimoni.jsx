@@ -17,26 +17,23 @@ export default function Testimoni({ data }) {
     }
 
     const nextTesti = () => {
+        const testi = document.getElementById('testi')
+        const img = document.getElementById('image')
+        img.classList.add('opacity-0')
+        testi.classList.add('opacity-0')
+        setTimeout(() => {
+            testi.classList.remove('opacity-0')
+            img.classList.remove('opacity-0')
+        }, 500)
         setIndex((index) => {
             let newIndex = index + 1
             return checkNumber(newIndex)
         })
-        const testi = document.getElementById('testi')
-        const img = document.getElementById('image')
-        img.classList.add('opacity-0')
-        testi.classList.add('opacity-0')
-        setTimeout(() => {
-            testi.classList.remove('opacity-0')
-            img.classList.remove('opacity-0')
-        }, 300)
+
 
     }
 
     const prevTesti = () => {
-        setIndex((index) => {
-            let newIndex = index - 1
-            return checkNumber(newIndex)
-        })
         const testi = document.getElementById('testi')
         const img = document.getElementById('image')
         img.classList.add('opacity-0')
@@ -44,7 +41,11 @@ export default function Testimoni({ data }) {
         setTimeout(() => {
             testi.classList.remove('opacity-0')
             img.classList.remove('opacity-0')
-        }, 300)
+        }, 100)
+        setIndex((index) => {
+            let newIndex = index - 1
+            return checkNumber(newIndex)
+        })
     }
     return (
         <section className='bg-[#605EEF]'>
@@ -55,7 +56,7 @@ export default function Testimoni({ data }) {
                             <AnimateIn>
                                 <Image
                                     src={image}
-                                    className='rounded-md'
+                                    className='duration-300 rounded-md'
                                     width={600}
                                     height={600}
                                     alt=''
@@ -85,16 +86,18 @@ export default function Testimoni({ data }) {
                     </div>
                     <div className='col-span-2 mb-10 md:py-20 px-8'>
                         <AnimateIn>
-                            <p id='testi' className='duration-300 sm:text-md text-[33px]'>
-                                {testimonial_text}
-                            </p>
-                            <div className='mt-5'>
-                                <h2 className='text-2xl'>
-                                    {testimonial_author}
-                                </h2>
-                                <p className='text-gray-800'>
-                                    CEO, Google
+                            <div id='testi' className='duration-300'>
+                                <p className='sm:text-md text-[33px]'>
+                                    {testimonial_text}
                                 </p>
+                                <div className='mt-5'>
+                                    <h2 className='text-2xl'>
+                                        {testimonial_author}
+                                    </h2>
+                                    <p className='text-gray-800'>
+                                        CEO, Google
+                                    </p>
+                                </div>
                             </div>
                         </AnimateIn>
                     </div>

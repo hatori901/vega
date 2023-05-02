@@ -9,8 +9,8 @@ const AnimateIn = ({ children }) => {
             ref={ref}
             style={{
                 opacity: onScreen ? 1 : 0,
-                translate: onScreen ? "none" : "0 2rem",
-                transition: "700ms ease-in",
+                translate: onScreen ? "none" : "0 3rem",
+                transition: "1000ms ease-in",
             }}
         >
             {children}

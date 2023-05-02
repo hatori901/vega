@@ -17,8 +17,8 @@ export default function Banner({ data }) {
         }
     }, []);
     return (
-        <section className="relative bg-[#244358] lg:px-8" >
-            <div className="mx-auto lg:grid lg:grid-cols-12 lg:gap-x-8 ">
+        <section className="relative bg-[#244358] lg:px-8 overflow-y-hidden" >
+            <div className="mx-auto lg:grid lg:grid-cols-12 lg:gap-x-8">
                 <div className="flex items-center lg:col-span-6 lg:mr-8">
                     <Image
                         ref={ref}
