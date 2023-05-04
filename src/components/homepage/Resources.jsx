@@ -15,7 +15,7 @@ export default function Resources({ data }) {
                     </h2>
                 </AnimateIn>
                 <AnimateIn>
-                    <h1 className='text-[68px] md:text-6xl my-10 leading-none'>
+                    <h1 className='text-[48px] md:text-[68px] md:text-6xl my-10 leading-none'>
                         Outstanding features built for your needs, <span className='text-[#605EEF]'>makes it easy to grow</span> supporters & extend your reach
                     </h1>
                 </AnimateIn>

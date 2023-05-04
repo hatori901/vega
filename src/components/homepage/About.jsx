@@ -22,7 +22,7 @@ export default function About({ data }) {
                         {data.about_text_2}
                     </h2>
                 </AnimateIn>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-[146px] my-10'>
+                <div className='grid grid-cols-1 md:grid-cols-3 md:gap-[146px] my-10'>
                     {
                         data.features.map((feature, index) => {
                             return (

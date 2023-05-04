@@ -5,7 +5,9 @@ function useElementOnScreen(ref, rootMargin = "0px") {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 // Update our state when observer callback fires
-                setIntersecting(entry.isIntersecting);
+                setTimeout(() => {
+                    setIntersecting(entry.isIntersecting);
+                }, 300);
             },
             {
                 rootMargin
