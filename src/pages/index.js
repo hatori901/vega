@@ -22,78 +22,52 @@ const font = localFont({
 })
 
 export default function Home({ navbar, data }) {
-	function init() {
-		new SmoothScroll(document, 120, 20)
+	function handleWheel(event) {
+		event.preventDefault();
+
+		const delta = Math.max(-1, Math.min(1, event.deltaY || -event.detail));
+		const scrollStep = window.innerHeight / 5;
+		const newScrollPosition = window.pageYOffset + delta * scrollStep;
+		const duration = 500; // Adjust this value to make the scroll duration slower or faster
+
+		scrollToY(newScrollPosition, duration);
 	}
 
-	function SmoothScroll(target, speed, smooth) {
-		if (target === document)
-			target = (document.scrollingElement
-				|| document.documentElement
-				|| document.body.parentNode
-				|| document.body) // cross browser support for document scrolling
+	function scrollToY(y, duration) {
+		const start = window.pageYOffset;
+		const end = y;
+		const distance = end - start;
+		let startTime = null;
 
-		var moving = false
-		var pos = target.scrollTop
-		var frame = target === document.body
-			&& document.documentElement
-			? document.documentElement
-			: target // safari is the new IE
-
-		target.addEventListener('mousewheel', scrolled, { passive: false })
-		target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
-
-		function scrolled(e) {
-			e.preventDefault(); // disable default scrolling
-
-			var delta = normalizeWheelDelta(e)
-
-			pos += -delta * speed
-			pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
-
-			if (!moving) update()
+		function animateScroll(timestamp) {
+			if (!startTime) {
+				startTime = timestamp;
+			}
+			const progress = timestamp - startTime;
+			const scrollY = easeOutQuad(progress, start, distance, duration);
+			window.scrollTo(0, scrollY);
+			if (progress < duration) {
+				window.requestAnimationFrame(animateScroll);
+			}
 		}
 
-		function normalizeWheelDelta(e) {
-			if (e.detail) {
-				if (e.wheelDelta)
-					return e.wheelDelta / e.detail / 40 * (e.detail > 0 ? 1 : -1) // Opera
-				else
-					return -e.detail / 3 // Firefox
-			} else
-				return e.wheelDelta / 120 // IE,Safari,Chrome
+		function easeOutQuad(t, b, c, d) {
+			t /= d;
+			return -c * t * (t - 2) + b;
 		}
 
-		function update() {
-			moving = true
-
-			var delta = (pos - target.scrollTop) / smooth
-
-			target.scrollTop += delta
-
-			if (Math.abs(delta) > 0.5)
-				requestFrame(update)
-			else
-				moving = false
-		}
-
-		var requestFrame = function () { // requestAnimationFrame cross browser
-			return (
-				window.requestAnimationFrame ||
-				window.webkitRequestAnimationFrame ||
-				window.mozRequestAnimationFrame ||
-				window.oRequestAnimationFrame ||
-				window.msRequestAnimationFrame ||
-				function (func) {
-					window.setTimeout(func, 1000 / 50);
-				}
-			);
-		}()
+		window.requestAnimationFrame(animateScroll);
 	}
 
 	useEffect(() => {
-		init()
-	}, [])
+		window.addEventListener("wheel", handleWheel, { passive: false });
+		window.addEventListener("DOMMouseScroll", handleWheel, { passive: false });
+
+		return () => {
+			window.removeEventListener("wheel", handleWheel);
+			window.removeEventListener("DOMMouseScroll", handleWheel);
+		};
+	}, []);
 	return (
 		<div className=''>
 			<Head>

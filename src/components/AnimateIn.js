@@ -10,7 +10,7 @@ const AnimateIn = ({ children }) => {
             style={{
                 opacity: onScreen ? 1 : 0,
                 translate: onScreen ? "none" : "0 3rem",
-                transition: "1000ms ease-in",
+                transition: "1000ms ease-in-out",
             }}
         >
             {children}

@@ -17,7 +17,7 @@ export default function Hero({ data }) {
     }, []);
     return (
         <section className="hero lg:px-8" >
-            <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8">
+            <div className="min-h-screen mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8">
                 <div className="bg-[#605EEF] px-6 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pt-48 xl:col-span-6">
                     <div className="mx-auto max-w-2xl lg:mx-0">
                         <AnimateIn>

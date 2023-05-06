@@ -24,13 +24,11 @@ export default function Testimoni({ data }) {
         setTimeout(() => {
             testi.classList.remove('opacity-0')
             img.classList.remove('opacity-0')
+            setIndex((index) => {
+                let newIndex = index + 1
+                return checkNumber(newIndex)
+            })
         }, 500)
-        setIndex((index) => {
-            let newIndex = index + 1
-            return checkNumber(newIndex)
-        })
-
-
     }
 
     const prevTesti = () => {
@@ -41,11 +39,12 @@ export default function Testimoni({ data }) {
         setTimeout(() => {
             testi.classList.remove('opacity-0')
             img.classList.remove('opacity-0')
-        }, 100)
-        setIndex((index) => {
-            let newIndex = index - 1
-            return checkNumber(newIndex)
-        })
+            setIndex((index) => {
+                let newIndex = index - 1
+                return checkNumber(newIndex)
+            })
+        }, 500)
+
     }
     return (
         <section className='bg-[#605EEF]'>
